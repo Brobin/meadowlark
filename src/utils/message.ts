@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { Client, EmbedBuilder, GatewayIntentBits } from "discord.js";
+import { EmbedBuilder } from "discord.js";
 import timezone from "dayjs/plugin/timezone";
 import utc from "dayjs/plugin/utc";
 import { Observation } from "../types";
@@ -24,7 +24,3 @@ export function buildDiscordMessage(observation: Observation) {
     })
     .setFooter({ text: observation.userDisplayName });
 }
-
-const client = new Client({
-  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
-});
