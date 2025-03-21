@@ -1,0 +1,12 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+  "name": "meadowlark",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": ["rvest.vs-code-prettier-eslint", "esbenp.prettier-vscode"]
+    }
+  }
+}
