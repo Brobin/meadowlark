@@ -10,7 +10,7 @@ async function updateRareBirds() {
   const obsIds = await getObsIds();
 
   const newObservatsion = observations.filter(
-    (obs) => !obsIds.includes(obs.obsId)
+    ({ obsId }) => !obsIds.has(obsId)
   );
 
   if (newObservatsion.length) {

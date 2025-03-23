@@ -18,7 +18,7 @@ export async function connect() {
 export async function getObsIds() {
   const db = await connect();
   const rows = await db.all("select obs_id from rare_birds;");
-  return rows.map((row: { obs_id: string }) => row.obs_id);
+  return new Set(rows.map((row: { obs_id: string }) => row.obs_id));
 }
 
 export async function insertObsIds(ids: string[]) {
