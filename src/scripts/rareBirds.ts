@@ -1,7 +1,7 @@
 import { getRareBirds } from "utils/ebird";
 import dotenv from "dotenv";
 import { Client, GatewayIntentBits } from "discord.js";
-import { buildDiscordMessage } from "utils/message";
+import { buildDiscordEmbed, buildDiscordMessage } from "utils/message";
 import { getObsIds, insertObsIds } from "utils/database";
 
 async function updateRareBirds() {
@@ -26,7 +26,10 @@ async function updateRareBirds() {
     if (channel?.isSendable()) {
       await Promise.all([
         ...newObservatsion.map((obs) =>
-          channel.send({ embeds: [buildDiscordMessage(obs)] })
+          channel.send({
+            content: buildDiscordMessage(obs),
+            embeds: [buildDiscordEmbed(obs)],
+          })
         ),
         insertObsIds(newObservatsion.map((obs) => obs.obsId)),
       ]);

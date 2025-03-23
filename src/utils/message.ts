@@ -9,6 +9,10 @@ dayjs.extend(timezone);
 dayjs.tz.setDefault("America/Chicago");
 
 export function buildDiscordMessage(observation: Observation) {
+  return `${observation.comName} in ${observation.subnational2Name} County`;
+}
+
+export function buildDiscordEmbed(observation: Observation) {
   const location = observation.locationPrivate
     ? `${observation.locName} (Personal Location)`
     : observation.locName;
