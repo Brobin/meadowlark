@@ -1,4 +1,4 @@
-const exclude = [
+const nebraskaExclude = [
   "Acadian Flycatcher",
   "American Avocet",
   "American Coot",
@@ -254,4 +254,8 @@ const exclude = [
   "Yellow-throated Vireo",
 ];
 
-export default new Set(exclude);
+const excludeMap: Record<string, Set<string>> = {
+  "US-NE": new Set(nebraskaExclude),
+};
+
+export default excludeMap;

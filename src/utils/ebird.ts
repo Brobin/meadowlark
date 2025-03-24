@@ -1,10 +1,14 @@
 import { Observation } from "../types";
 import exclude from "./exclude";
 
-export async function getRareBirds(): Promise<Observation[]> {
+export async function getRareBirds(region: string): Promise<Observation[]> {
+  const excludeList = exclude[region] ?? new Set();
+
   const observations: Observation[] = await fetch(
-    "https://api.ebird.org/v2/data/obs/US-NE/recent/notable?detail=full&back=1",
-    { headers: { "X-eBirdApiToken": process.env.EBIRD_API_TOKEN as string } }
+    `https://api.ebird.org/v2/data/obs/${region}/recent/notable?detail=full&back=1`,
+    {
+      headers: { "X-eBirdApiToken": process.env.EBIRD_API_TOKEN as string },
+    }
   )
     .then((response) => response.json())
     .then((observations) =>
@@ -17,7 +21,7 @@ export async function getRareBirds(): Promise<Observation[]> {
     .then((observations) =>
       observations.filter((obs: Observation) => {
         let name = obs.comName.split(" (", 1)[0]; // remove subspecies
-        return !obs.comName.includes("hybrid") && !exclude.has(name);
+        return !obs.comName.includes("hybrid") && !excludeList.has(name);
       })
     )
     .catch((error) => console.log(error));
