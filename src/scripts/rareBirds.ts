@@ -1,8 +1,8 @@
 import { getRareBirds } from "utils/ebird";
 import dotenv from "dotenv";
-import { Client, GatewayIntentBits } from "discord.js";
 import { buildDiscordEmbed, buildDiscordMessage } from "utils/message";
 import { getObsIds, insertObsIds } from "utils/database";
+import { login } from "utils/discord";
 
 async function updateRareBirds(region: string, channelId: string) {
   dotenv.config();
@@ -14,14 +14,14 @@ async function updateRareBirds(region: string, channelId: string) {
   );
 
   if (newObservatsion.length) {
-    const client = new Client({
-      intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
-    });
-    await client.login(process.env.DISCORD_TOKEN);
+    const client = await login();
 
     const channel = await client.channels.fetch(channelId);
 
+    console.log(channel);
+
     if (channel?.isSendable()) {
+      console.log("sending");
       await Promise.all([
         ...newObservatsion.map((obs) =>
           channel.send({
