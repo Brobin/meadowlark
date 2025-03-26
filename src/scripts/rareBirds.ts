@@ -18,10 +18,7 @@ async function updateRareBirds(region: string, channelId: string) {
 
     const channel = await client.channels.fetch(channelId);
 
-    console.log(channel);
-
     if (channel?.isSendable()) {
-      console.log("sending");
       await Promise.all([
         ...newObservatsion.map((obs) =>
           channel.send({
