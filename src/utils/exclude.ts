@@ -109,7 +109,7 @@ const nebraskaExclude = [
   "Horned Lark",
   "House Finch",
   "House Sparrow",
-  "House Wren",
+  "Northern House Wren",
   "Hudsonian Godwit",
   "Iceland Gull",
   "Indigo Bunting",
