@@ -4,35 +4,41 @@ import { buildDiscordEmbed, buildDiscordMessage } from "utils/message";
 import { getObsIds, insertObsIds } from "utils/database";
 import { login } from "utils/discord";
 
-async function updateRareBirds(region: string, channelId: string) {
+async function updateRareBirds(
+  region: string,
+  channelId: string,
+  skip: boolean
+) {
   dotenv.config();
   const observations = await getRareBirds(region);
   const obsIds = await getObsIds(region);
 
-  const newObservatsion = observations.filter(
+  const newObservations = observations.filter(
     ({ obsId }) => !obsIds.has(obsId)
   );
 
-  if (newObservatsion.length) {
+  if (newObservations.length) {
     const client = await login();
 
     const channel = await client.channels.fetch(channelId);
 
-    if (channel?.isSendable()) {
+    if (channel?.isSendable() && !skip) {
       await Promise.all([
-        ...newObservatsion.map((obs) =>
+        ...newObservations.map((obs) =>
           channel.send({
             content: buildDiscordMessage(obs),
             embeds: [buildDiscordEmbed(obs)],
           })
         ),
-        insertObsIds(
-          newObservatsion.map((obs) => obs.obsId),
-          region
-        ),
       ]);
     }
+
+    await insertObsIds(
+      newObservations.map((obs) => obs.obsId),
+      region
+    );
   }
+
   await process.exit();
 }
 function rareBirds() {
@@ -44,8 +50,10 @@ function rareBirds() {
   const channleArg = args.find((arg) => arg.startsWith("--channel="));
   const channelId = channleArg ? channleArg.split("=")[1] : undefined;
 
+  const skip = args.find((arg) => arg.startsWith("--skip")) ? true : false;
+
   if (region && channelId) {
-    updateRareBirds(region, channelId);
+    updateRareBirds(region, channelId, skip);
   }
 }
 
