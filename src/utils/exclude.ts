@@ -255,6 +255,7 @@ const nebraskaExclude = new Set([
   "Yellow-headed Blackbird",
   "Yellow-rumped Warbler",
   "Yellow-throated Vireo",
+  "Yellow-throated Warbler",
 ]);
 
 const excludeEasternCounties = new Set([
