@@ -469,11 +469,16 @@ const excludeEasternCounties = new Set([
   "Yellow-throated Vireo",
 ]);
 
+const sarpyExclude = new Set([
+  ...excludeEasternCounties,
+  "Yellow-throated Warbler",
+]);
+
 const excludeMap: Record<string, Set<string>> = {
   "US-NE": nebraskaExclude,
   "US-NE-109": excludeEasternCounties,
   "US-NE-055": excludeEasternCounties,
-  "US-NE-153": excludeEasternCounties,
+  "US-NE-153": sarpyExclude,
 };
 
 export default excludeMap;
