@@ -5,7 +5,7 @@ export async function getRareBirds(region: string): Promise<Observation[]> {
   const excludeList = exclude[region] ?? new Set();
 
   const observations: Observation[] = await fetch(
-    `https://api.ebird.org/v2/data/obs/${region}/recent/notable?detail=full&back=1`,
+    `https://api.ebird.org/v2/data/obs/${region}/recent/notable?detail=full&back=3`,
     {
       headers: { "X-eBirdApiToken": process.env.EBIRD_API_TOKEN as string },
     }
