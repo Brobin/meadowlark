@@ -397,6 +397,7 @@ const excludeEasternCounties = new Set([
   "Pied-billed Grebe",
   "Pileated Woodpecker",
   "Pine Siskin",
+  "Prothonotary Warbler",
   "Purple Finch",
   "Purple Martin",
   "Pygmy Nuthatch",
@@ -473,6 +474,7 @@ const excludeEasternCounties = new Set([
 
 const sarpyExclude = new Set([
   ...excludeEasternCounties,
+  "Prothonotary Warbler",
   "Yellow-throated Warbler",
 ]);
 
