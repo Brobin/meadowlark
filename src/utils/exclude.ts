@@ -199,6 +199,7 @@ const nebraskaExclude = new Set([
   "Savannah Sparrow",
   "Say's Phoebe",
   "Scarlet Tanager",
+  "Scissor-tailed Flycatcher",
   "Sedge Wren",
   "Semipalmated Plover",
   "Semipalmated Sandpiper",
