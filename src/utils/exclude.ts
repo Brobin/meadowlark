@@ -1,6 +1,7 @@
 const nebraskaExclude = new Set([
   "Acadian Flycatcher",
   "American Avocet",
+  "American Barn Owl",
   "American Coot",
   "American Crow",
   "American Golden-Plover",
@@ -92,6 +93,7 @@ const nebraskaExclude = new Set([
   "Golden Eagle",
   "Golden-crowned Kinglet",
   "Grasshopper Sparrow",
+  "Gray-cheeked Thrush",
   "Gray Catbird",
   "Great Blue Heron",
   "Great Crested Flycatcher",
