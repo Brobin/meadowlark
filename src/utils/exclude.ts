@@ -55,6 +55,7 @@ const nebraskaExclude = new Set([
   "Cassin's Kingbird",
   "Cedar Waxwing",
   "Chestnut-collared Longspur",
+  "Chestnut-sided Warbler",
   "Chimney Swift",
   "Chipping Sparrow",
   "Cinnamon Teal",
