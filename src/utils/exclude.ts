@@ -430,6 +430,7 @@ const excludeEasternCounties = new Set([
   "Rusty Blackbird",
   "Sandhill Crane",
   "Savannah Sparrow",
+  "Scarlet Tanager",
   "Sedge Wren",
   "Semipalmated Plover",
   "Semipalmated Sandpiper",
