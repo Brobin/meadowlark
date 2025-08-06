@@ -26,6 +26,7 @@ const nebraskaExclude = new Set([
   "Belted Kingfisher",
   "Black Tern",
   "Black-and-white Warbler",
+  "Black-bellied Plover",
   "Black-billed Magpie",
   "Black-capped Chickadee",
   "Black-crowned Night Heron",
