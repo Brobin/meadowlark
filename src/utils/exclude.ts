@@ -47,6 +47,7 @@ const nebraskaExclude = new Set([
   "Brown Thrasher",
   "Brown-headed Cowbird",
   "Bufflehead",
+  "Buff-breasted Sandpiper",
   "Bullock's Oriole",
   "Burrowing Owl",
   "Cackling Goose",
