@@ -10,7 +10,6 @@ async function updateRareBirds(
   channelId: string,
   skip: boolean
 ) {
-  dotenv.config();
   const observations = await getRareBirds(region);
   const obsIds = await getObsIds(region);
 
@@ -39,19 +38,21 @@ async function updateRareBirds(
       region
     );
   }
-
-  await process.exit();
 }
-function rareBirds() {
-  const args = process.argv.slice(2);
 
+async function rareBirds() {
+  dotenv.config();
+
+  const args = process.argv.slice(2);
   const skip = args.find((arg) => arg.startsWith("--skip")) ? true : false;
 
-  config.forEach(({ channel, regions }) => {
-    regions.forEach(async (region) => {
-      await updateRareBirds(region, channel, skip);
-    });
-  });
+  await Promise.all(
+    config.flatMap(({ channel, regions }) =>
+      regions.map((region) => updateRareBirds(region, channel, skip))
+    )
+  );
+
+  await process.exit();
 }
 
 rareBirds();
