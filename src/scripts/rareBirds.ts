@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { buildDiscordEmbed, buildDiscordMessage } from "utils/message";
 import { getObsIds, insertObsIds } from "utils/database";
 import { login } from "utils/discord";
+import { config } from "../../config";
 
 async function updateRareBirds(
   region: string,
@@ -41,20 +42,13 @@ async function updateRareBirds(
 
   await process.exit();
 }
+
 function rareBirds() {
-  const args = process.argv.slice(2);
-
-  const regionArg = args.find((arg) => arg.startsWith("--region="));
-  const region = regionArg ? regionArg.split("=")[1] : undefined;
-
-  const channleArg = args.find((arg) => arg.startsWith("--channel="));
-  const channelId = channleArg ? channleArg.split("=")[1] : undefined;
-
-  const skip = args.find((arg) => arg.startsWith("--skip")) ? true : false;
-
-  if (region && channelId) {
-    updateRareBirds(region, channelId, skip);
-  }
+  config.forEach(({ channel, regions }) => {
+    regions.forEach(async (region) => {
+      await updateRareBirds(region, channel, false);
+    });
+  });
 }
 
 rareBirds();
