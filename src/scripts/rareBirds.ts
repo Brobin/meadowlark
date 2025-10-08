@@ -42,11 +42,14 @@ async function updateRareBirds(
 
   await process.exit();
 }
-
 function rareBirds() {
+  const args = process.argv.slice(2);
+
+  const skip = args.find((arg) => arg.startsWith("--skip")) ? true : false;
+
   config.forEach(({ channel, regions }) => {
     regions.forEach(async (region) => {
-      await updateRareBirds(region, channel, false);
+      await updateRareBirds(region, channel, skip);
     });
   });
 }
