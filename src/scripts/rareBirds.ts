@@ -17,6 +17,8 @@ async function updateRareBirds(
     ({ obsId }) => !obsIds.has(obsId)
   );
 
+  console.log(newObservations.length, region);
+
   if (newObservations.length) {
     const client = await login();
 
@@ -42,6 +44,8 @@ async function updateRareBirds(
 
 async function rareBirds() {
   dotenv.config();
+
+  console.log("\nstarting rba bot run");
 
   const args = process.argv.slice(2);
   const skip = args.find((arg) => arg.startsWith("--skip")) ? true : false;

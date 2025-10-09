@@ -11,7 +11,7 @@ export const config = [
   },
   {
     // Omaha
-    channel: "1353706678498889758",
+    channel: "1353711880048349204",
     regions: [
       "US-NE-055", // Douglas
       "US-NE-153", // Sarpy
