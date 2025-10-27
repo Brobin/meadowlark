@@ -8,9 +8,10 @@ import { config } from "../../config";
 async function updateRareBirds(
   region: string,
   channelId: string,
-  skip: boolean
+  skip: boolean,
+  exclude: Set<string> = new Set()
 ) {
-  const observations = await getRareBirds(region);
+  const observations = await getRareBirds(region, exclude);
   const obsIds = await getObsIds(region);
 
   const newObservations = observations.filter(
@@ -51,8 +52,8 @@ async function rareBirds() {
   const skip = args.find((arg) => arg.startsWith("--skip")) ? true : false;
 
   await Promise.all(
-    config.flatMap(({ channel, regions }) =>
-      regions.map((region) => updateRareBirds(region, channel, skip))
+    config.flatMap(({ channel, regions, exclude }) =>
+      regions.map((region) => updateRareBirds(region, channel, skip, exclude))
     )
   );
 

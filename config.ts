@@ -1,13 +1,28 @@
-export const config = [
+import {
+  excludeEasternCounties,
+  nebraskaExclude,
+  sarpyExclude,
+  triCityExclude,
+} from "./exclude";
+
+type RbaConfig = {
+  channel: string;
+  regions: string[];
+  exclude?: Set<string>;
+};
+
+export const config: RbaConfig[] = [
   {
     // Statewide
     channel: "1246125443736928407",
     regions: ["US-NE"],
+    exclude: nebraskaExclude,
   },
   {
     // Lincoln
     channel: "1353706678498889758",
     regions: ["US-NE-109"],
+    exclude: excludeEasternCounties,
   },
   {
     // Omaha
@@ -17,6 +32,7 @@ export const config = [
       "US-NE-153", // Sarpy
       "US-NE-177", // Washington
     ],
+    exclude: sarpyExclude,
   },
   {
     // Tri-city
@@ -31,5 +47,6 @@ export const config = [
       "US-NE-137", // Phelps
       "US-NE-035", // Clay
     ],
+    exclude: triCityExclude,
   },
 ];
