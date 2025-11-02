@@ -6,8 +6,11 @@ import {
 } from "./exclude";
 
 type RbaConfig = {
+  /** Discord Channel ID */
   channel: string;
+  /** List of ebird regions to include */
   regions: string[];
+  /** Species to exclude from the RBA. Useful for seasonal rarities */
   exclude?: Set<string>;
 };
 

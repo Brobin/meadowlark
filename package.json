@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "rba": "tsx src/scripts/rareBirds",
-    "ping": "tsx src/scripts/ping"
+    "rba": "tsx src/scripts/rareBirds"
   },
   "devDependencies": {
     "@types/node": "^22.13.11",
