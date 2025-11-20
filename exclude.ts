@@ -3,6 +3,7 @@ export const nebraskaExclude = new Set([
   "Alder Flycatcher",
   "American Avocet",
   "American Barn Owl",
+  "American Bittern",
   "American Coot",
   "American Crow",
   "American Golden-Plover",
