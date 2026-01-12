@@ -164,6 +164,7 @@ export const nebraskaExclude = new Set([
   "Northern Parula",
   "Northern Pintail",
   "Northern Rough-winged Swallow",
+  "Northern Saw-whet Owl",
   "Northern Shoveler",
   "Northern Shrike",
   "Northern Waterthrush",
