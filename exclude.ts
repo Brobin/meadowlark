@@ -384,8 +384,6 @@ export const excludeEasternCounties = new Set([
   "Least Flycatcher",
   "Least Sandpiper",
   "Least Tern",
-  "Lesser Black-backed Gull",
-  "Lesser Goldfinch",
   "Lesser Scaup",
   "Lesser Yellowlegs",
   "Lincoln's Sparrow",
@@ -669,6 +667,11 @@ export const triCityExclude = new Set([
   "Indigo Bunting",
   "Dickcissel",
 ]);
+
+export const lancasterExclude = new Set([
+  ...excludeEasternCounties,
+  "Lesser Black-backed Gull"
+])
 
 export const sarpyExclude = new Set([
   ...excludeEasternCounties,

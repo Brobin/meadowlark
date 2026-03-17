@@ -1,5 +1,5 @@
 import {
-  excludeEasternCounties,
+  lancasterExclude,
   nebraskaExclude,
   sarpyExclude,
   triCityExclude,
@@ -25,7 +25,7 @@ export const config: RbaConfig[] = [
     // Lincoln
     channel: "1353706678498889758",
     regions: ["US-NE-109"],
-    exclude: excludeEasternCounties,
+    exclude: lancasterExclude,
   },
   {
     // Omaha
