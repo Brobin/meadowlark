@@ -1,4 +1,23 @@
+export const hybridExclude = new Set([
+  "Greater White-fronted x Canada Goose",
+  "Snow x Cackling Goose",
+  "Spotted x Eastern Towhee",
+  "Snow x Ross's Goose",
+  "Snow/Ross's x Cackling/Canada Goose",
+  "Snow x Greater White-fronted Goose",
+  "Snow x Canada Goose",
+  "Graylag x Swan Goose",
+  "Ross's x Cackling Goose",
+  "Muscovy Duck x Mallard",
+  "Swan x Canada Goose",
+  "Domestic goose sp. x Canada Goose",
+  "Greater White-fronted x Cackling Goose",
+  "Graylag x Canada Goose",
+  "Ross's x Canada Goose"
+])
+
 export const nebraskaExclude = new Set([
+  ...hybridExclude,
   "Acadian Flycatcher",
   "Alder Flycatcher",
   "American Avocet",
@@ -280,6 +299,7 @@ export const nebraskaExclude = new Set([
 ]);
 
 export const excludeEasternCounties = new Set([
+  ...hybridExclude,
   "American Avocet",
   "American Coot",
   "American Crow",
@@ -485,6 +505,7 @@ export const excludeEasternCounties = new Set([
 ]);
 
 export const triCityExclude = new Set([
+  ...hybridExclude,
   "Snow Goose",
   "Ross's Goose",
   "Greater White-fronted Goose",

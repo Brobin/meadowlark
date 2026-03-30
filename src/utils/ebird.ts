@@ -20,8 +20,8 @@ export async function getRareBirds(
     )
     .then((observations) =>
       observations.filter((obs: Observation) => {
-        let name = obs.comName.split(" (", 1)[0]; // remove subspecies
-        return !obs.comName.includes("hybrid") && !exclude.has(name);
+        let name = obs.comName.split(" (", 1)[0]; // remove subspecies and hybrid tag
+        return !exclude.has(name);
       })
     )
     .catch((error) => console.log(error));
