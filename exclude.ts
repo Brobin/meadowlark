@@ -406,10 +406,8 @@ export const excludeEasternCounties = new Set([
   "Loggerhead Shrike",
   "Long-billed Dowitcher",
   "Mallard",
-  "Marbled Godwit",
   "Marsh Wren",
   "Merlin",
-  "Mississippi Kite",
   "Mourning Dove",
   "Nashville Warbler",
   "Northern Bobwhite",
@@ -461,7 +459,6 @@ export const excludeEasternCounties = new Set([
   "Semipalmated Plover",
   "Semipalmated Sandpiper",
   "Sharp-shinned Hawk",
-  "Short-billed Dowitcher",
   "Snow Goose",
   "Solitary Sandpiper",
   "Song Sparrow",
@@ -684,7 +681,10 @@ export const triCityExclude = new Set([
 
 export const lancasterExclude = new Set([
   ...excludeEasternCounties,
-  "Lesser Black-backed Gull"
+  "Lesser Black-backed Gull",
+  "Marbled Godwit",
+  "Mississippi Kite",
+  "Short-billed Dowitcher",
 ])
 
 export const sarpyExclude = new Set([
