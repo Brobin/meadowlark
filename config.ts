@@ -4,6 +4,7 @@ import {
   sarpyExclude,
   triCityExclude,
   hybridExclude,
+  excludeEasternCounties,
 } from "./exclude";
 
 type RbaConfig = {
@@ -32,11 +33,17 @@ export const config: RbaConfig[] = [
     // Omaha
     channel: "1353711880048349204",
     regions: [
-      "US-NE-055", // Douglas
       "US-NE-153", // Sarpy
-      "US-NE-177", // Washington
     ],
     exclude: sarpyExclude,
+  },
+  {
+    channel: "1353711880048349204",
+    regions: [
+      "US-NE-055", // Douglas
+      "US-NE-177", // Washington
+    ],
+    exclude: excludeEasternCounties,
   },
   {
     // Tri-city
