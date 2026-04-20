@@ -229,6 +229,7 @@ export const nebraskaExclude = new Set([
   "Ruby-throated Hummingbird",
   "Ruddy Duck",
   "Rusty Blackbird",
+  "Sanderling",
   "Sandhill Crane",
   "Savannah Sparrow",
   "Say's Phoebe",
