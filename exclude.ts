@@ -244,6 +244,7 @@ export const nebraskaExclude = new Set([
   "Short-billed Dowitcher",
   "Short-eared Owl",
   "Snow Goose",
+  "Snowy Egret",
   "Solitary Sandpiper",
   "Song Sparrow",
   "Sora",
