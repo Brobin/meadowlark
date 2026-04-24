@@ -92,6 +92,7 @@ export const nebraskaExclude = new Set([
   "Common Merganser",
   "Common Nighthawk",
   "Common Poorwill",
+  "Common Tern",
   "Common Yellowthroat",
   "Cooper's Hawk",
   "Dark-eyed Junco",
