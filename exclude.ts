@@ -46,6 +46,7 @@ export const nebraskaExclude = new Set([
   "Bell's Vireo",
   "Belted Kingfisher",
   "Black Tern",
+  "Blackburnian Warbler",
   "Black-and-white Warbler",
   "Black-bellied Plover",
   "Black-billed Magpie",
