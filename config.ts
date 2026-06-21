@@ -3,8 +3,8 @@ import {
   nebraskaExclude,
   sarpyExclude,
   triCityExclude,
-  hybridExclude,
   excludeEasternCounties,
+  panhandleExclude,
 } from "./exclude";
 
 type RbaConfig = {
@@ -60,4 +60,23 @@ export const config: RbaConfig[] = [
     ],
     exclude: triCityExclude,
   },
+  {
+    // Panhandle
+    channel: "1518278352593485895",
+    regions: [
+      "US-NE-101", // Keith
+      "US-NE-165", // Sioux
+      "US-NE-157", // Scotts Bluff
+      "US-NE-007", // Banner
+      "US-NE-105", // Kimball
+      "US-NE-045", // Dawes
+      "US-NE-103", // Box Butte
+      "US-NE-123", // Morrill
+      "US-NE-033", // Cheyenne
+      "US-NE-161", // Sheridan
+      "US-NE-069", // Garden
+      "US-NE-049", // Deuel
+    ],
+    exclude: panhandleExclude
+  }
 ];
