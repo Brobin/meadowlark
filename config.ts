@@ -6,6 +6,7 @@ import {
   excludeEasternCounties,
   panhandleExclude,
   keithExclude,
+  westernPanhandleExclude,
 } from "./exclude";
 
 type RbaConfig = {
@@ -65,10 +66,6 @@ export const config: RbaConfig[] = [
     // Panhandle
     channel: "1518278352593485895",
     regions: [
-      "US-NE-165", // Sioux
-      "US-NE-157", // Scotts Bluff
-      "US-NE-007", // Banner
-      "US-NE-105", // Kimball
       "US-NE-045", // Dawes
       "US-NE-103", // Box Butte
       "US-NE-123", // Morrill
@@ -78,6 +75,17 @@ export const config: RbaConfig[] = [
       "US-NE-049", // Deuel
     ],
     exclude: panhandleExclude
+  },
+  {
+    // Western Panhandle
+    channel: "1518278352593485895",
+    regions: [
+      "US-NE-165", // Sioux
+      "US-NE-157", // Scotts Bluff
+      "US-NE-007", // Banner
+      "US-NE-105", // Kimball
+    ],
+    exclude: westernPanhandleExclude
   },
   {
     // Keith

@@ -752,7 +752,6 @@ export const panhandleExclude = new Set([
   "Caspian Tern",
   "Cassin's Kingbird",
   "Cedar Waxwing",
-  "Chestnut-collared Longspur",
   "Chimney Swift",
   "Chipping Sparrow",
   "Cinnamon Teal",
@@ -846,11 +845,9 @@ export const panhandleExclude = new Set([
   "Peregrine Falcon",
   "Pied-billed Grebe",
   "Pine Siskin",
-  "Piping Plover",
   "Plumbeous Vireo",
   "Prairie Falcon",
   "Purple Martin",
-  "Pygmy Nuthatch",
   "Red Crossbill",
   "Red-bellied Woodpecker",
   "Red-breasted Merganser",
@@ -890,7 +887,6 @@ export const panhandleExclude = new Set([
   "Spotted Sandpiper",
   "Spotted Towhee",
   "Stilt Sandpiper",
-  "Surf Scoter",
   "Swainson's Hawk",
   "Swainson's Thrush",
   "Swamp Sparrow",
@@ -900,7 +896,6 @@ export const panhandleExclude = new Set([
   "Turkey Vulture",
   "Upland Sandpiper",
   "Vesper Sparrow",
-  "Violet-green Swallow",
   "Virginia Rail",
   "Eastern Warbling Vireo",
   "Western Grebe",
@@ -913,7 +908,6 @@ export const panhandleExclude = new Set([
   "White-faced Ibis",
   "White-rumped Sandpiper",
   "White-throated Sparrow",
-  "White-throated Swift",
   "Wild Turkey",
   "Willet",
   "Willow Flycatcher",
@@ -928,16 +922,22 @@ export const panhandleExclude = new Set([
   "Yellow-rumped Warbler",
 ]);
 
+export const westernPanhandleExclude = new Set([
+  ...panhandleExclude,
+  "Cassin's Kingbird",
+  "Chestnut-collared Longspur",
+  "Pygmy Nuthatch",
+  "Thick-billed Longspur",
+  "Violet-green Swallow",
+  "Western Flycatcher",
+  "White-throated Swift",
+])
+
 export const keithExclude = new Set([
   ...panhandleExclude,
   "California Gull",
   "Iceland Gull",
   "Least Tern",
   "Lesser Black-backed Gull",
+  "Piping Plover",
 ])
-
-keithExclude.delete("Cassin's Kingbird");
-keithExclude.delete('Chestnut-collared Longspur');
-keithExclude.delete('Pygmy Nuthatch');
-keithExclude.delete('Violet-green Swallow');
-keithExclude.delete('White-throated Swift');
