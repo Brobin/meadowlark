@@ -5,6 +5,7 @@ import {
   triCityExclude,
   excludeEasternCounties,
   panhandleExclude,
+  keithExclude,
 } from "./exclude";
 
 type RbaConfig = {
@@ -64,7 +65,6 @@ export const config: RbaConfig[] = [
     // Panhandle
     channel: "1518278352593485895",
     regions: [
-      "US-NE-101", // Keith
       "US-NE-165", // Sioux
       "US-NE-157", // Scotts Bluff
       "US-NE-007", // Banner
@@ -78,5 +78,13 @@ export const config: RbaConfig[] = [
       "US-NE-049", // Deuel
     ],
     exclude: panhandleExclude
+  },
+  {
+    // Keith
+    channel: "1518278352593485895",
+    regions: [
+      "US-NE-101", // Keith
+    ],
+    exclude: keithExclude
   }
 ];

@@ -747,7 +747,6 @@ export const panhandleExclude = new Set([
   "Bullock's Oriole",
   "Burrowing Owl",
   "Cackling Goose",
-  "California Gull",
   "Canada Goose",
   "Canvasback",
   "Caspian Tern",
@@ -798,7 +797,6 @@ export const panhandleExclude = new Set([
   "Greater Scaup",
   "Greater White-fronted Goose",
   "Greater Yellowlegs",
-  "Green Heron",
   "Green-winged Teal",
   "Hairy Woodpecker",
   "Harris's Sparrow",
@@ -808,7 +806,6 @@ export const panhandleExclude = new Set([
   "Horned Lark",
   "House Finch",
   "House Sparrow",
-  "Iceland Gull",
   "Killdeer",
   "Lapland Longspur",
   "Lark Bunting",
@@ -816,8 +813,6 @@ export const panhandleExclude = new Set([
   "Lazuli Bunting",
   "Least Flycatcher",
   "Least Sandpiper",
-  "Least Tern",
-  "Lesser Black-backed Gull",
   "Lesser Goldfinch",
   "Lesser Scaup",
   "Lesser Yellowlegs",
@@ -839,7 +834,6 @@ export const panhandleExclude = new Set([
   "Northern Mockingbird",
   "Northern Pintail",
   "Northern Rough-winged Swallow",
-  "Northern Saw-whet Owl",
   "Northern Shoveler",
   "Northern Shrike",
   "Northern Waterthrush",
@@ -875,7 +869,6 @@ export const panhandleExclude = new Set([
   "Ross's Goose",
   "Rough-legged Hawk",
   "Ruby-crowned Kinglet",
-  "Ruby-throated Hummingbird",
   "Ruddy Duck",
   "Ruddy Turnstone",
   "Sanderling",
@@ -928,10 +921,23 @@ export const panhandleExclude = new Set([
   "Wilson's Snipe",
   "Wilson's Warbler",
   "Wood Duck",
-  "Wood Thrush",
   "Northern Yellow Warbler",
   "Yellow-billed Cuckoo",
   "Yellow-breasted Chat",
   "Yellow-headed Blackbird",
   "Yellow-rumped Warbler",
 ]);
+
+export const keithExclude = new Set([
+  ...panhandleExclude,
+  "California Gull",
+  "Iceland Gull",
+  "Least Tern",
+  "Lesser Black-backed Gull",
+])
+
+keithExclude.delete("Cassin's Kingbird");
+keithExclude.delete('Chestnut-collared Longspur');
+keithExclude.delete('Pygmy Nuthatch');
+keithExclude.delete('Violet-green Swallow');
+keithExclude.delete('White-throated Swift');
