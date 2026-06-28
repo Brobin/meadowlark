@@ -867,7 +867,6 @@ export const panhandleExclude = new Set([
   "Rough-legged Hawk",
   "Ruby-crowned Kinglet",
   "Ruddy Duck",
-  "Ruddy Turnstone",
   "Sanderling",
   "Sandhill Crane",
   "Savannah Sparrow",
