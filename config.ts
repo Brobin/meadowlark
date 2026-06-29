@@ -67,7 +67,7 @@ export const config: RbaConfig[] = [
     channel: "1518278352593485895",
     regions: [
       "US-NE-045", // Dawes
-      "US-NE-103", // Box Butte
+      "US-NE-013", // Box Butte
       "US-NE-123", // Morrill
       "US-NE-033", // Cheyenne
       "US-NE-161", // Sheridan
