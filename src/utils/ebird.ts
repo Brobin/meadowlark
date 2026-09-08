@@ -2,7 +2,8 @@ import { Observation } from "../types";
 
 export async function getRareBirds(
   region: string,
-  exclude: Set<string>
+  exclude: Set<string>,
+  subregionExclude: Record<string, Set<string>>
 ): Promise<Observation[]> {
   const observations: Observation[] = await fetch(
     `https://api.ebird.org/v2/data/obs/${region}/recent/notable?detail=full&back=3`,
@@ -21,6 +22,9 @@ export async function getRareBirds(
     .then((observations) =>
       observations.filter((obs: Observation) => {
         let name = obs.comName.split(" (", 1)[0]; // remove subspecies and hybrid tag
+        if(obs.subnational2Code in subregionExclude) {
+          return !subregionExclude[obs.subnational2Code].has(name) && !exclude.has(name);
+        }
         return !exclude.has(name);
       })
     )

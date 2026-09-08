@@ -232,6 +232,7 @@ export const nebraskaExclude = new Set([
   "Ruby-throated Hummingbird",
   "Ruddy Duck",
   "Ruddy Turnstone",
+  "Rufous Hummingbird",
   "Rusty Blackbird",
   "Sanderling",
   "Sandhill Crane",
@@ -696,6 +697,7 @@ export const lancasterExclude = new Set([
 
 export const sarpyExclude = new Set([
   ...excludeEasternCounties,
+  "Acadian Flycatcher",
   "Prothonotary Warbler",
   "Yellow-throated Warbler",
 ]);

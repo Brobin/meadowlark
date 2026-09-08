@@ -16,6 +16,7 @@ type RbaConfig = {
   regions: string[];
   /** Species to exclude from the RBA. Useful for seasonal rarities */
   exclude?: Set<string>;
+  subregionExclude?: Record<string, Set<string>>
 };
 
 export const config: RbaConfig[] = [
@@ -24,6 +25,21 @@ export const config: RbaConfig[] = [
     channel: "1246125443736928407",
     regions: ["US-NE"],
     exclude: nebraskaExclude,
+    subregionExclude: {
+      "US-NE-105": new Set([ // Kimball
+        "Cassin's Sparrow",
+        "Hammond's Flycatcher",
+        "Western Flycatcher",
+      ]),
+      "US-NE-157": new Set([ // Scotts Bluff
+        "Black-chinned Hummingbird",
+        "Cassin's Finch",
+        "Western Flycatcher",
+      ]),
+      "US-NE-153": new Set([ // Sarpy
+        "Yellow-bellied Flycatcher"
+      ])
+    }
   },
   {
     // Lincoln
