@@ -684,6 +684,7 @@ export const triCityExclude = new Set([
   "Blue Grosbeak",
   "Indigo Bunting",
   "Dickcissel",
+  "Red Crossbill",
 ]);
 
 export const lancasterExclude = new Set([
