@@ -689,6 +689,7 @@ export const triCityExclude = new Set([
 
 export const lancasterExclude = new Set([
   ...excludeEasternCounties,
+  "American Golden-Plover",
   "Lesser Black-backed Gull",
   "Louisiana Waterthrush",
   "Marbled Godwit",
