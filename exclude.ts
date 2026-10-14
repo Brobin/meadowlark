@@ -254,6 +254,7 @@ export const nebraskaExclude = new Set([
   "Sora",
   "Spotted Sandpiper",
   "Spotted Towhee",
+  "Sprague's Pipit",
   "Stilt Sandpiper",
   "Summer Tanager",
   "Surf Scoter",

@@ -38,6 +38,12 @@ export const config: RbaConfig[] = [
       ]),
       "US-NE-153": new Set([ // Sarpy
         "Yellow-bellied Flycatcher"
+      ]),
+      "US-NE-109": new Set([ // Lancaster
+        "Smith's Longspur",
+      ]),
+      "US-NE-107": new Set([  // Knox
+        "Nelson's Sparrow"
       ])
     }
   },
